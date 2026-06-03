@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 88" aria-hidden="true">
+  <defs>
+    <linearGradient id="petalGradient" x1="13" y1="9" x2="54" y2="78" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F6C5D2"/>
+      <stop offset="0.48" stop-color="#E07A9D"/>
+      <stop offset="1" stop-color="#C96A6A"/>
+    </linearGradient>
+    <radialGradient id="petalLight" cx="33%" cy="25%" r="70%">
+      <stop offset="0" stop-color="#FFF8F6" stop-opacity="0.86"/>
+      <stop offset="0.52" stop-color="#FFF8F6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFF8F6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path
+    d="M49.9 6.9C31.3 8.7 13.7 22.7 8.8 42.7 4.7 59.4 13.5 77 29.9 83.2c13.6-7.8 23.7-20.9 26.3-36.6 2.3-13.7-.3-27.6-6.3-39.7Z"
+    fill="url(#petalGradient)"
+  />
+  <path
+    d="M49.9 6.9C31.3 8.7 13.7 22.7 8.8 42.7 4.7 59.4 13.5 77 29.9 83.2c13.6-7.8 23.7-20.9 26.3-36.6 2.3-13.7-.3-27.6-6.3-39.7Z"
+    fill="url(#petalLight)"
+  />
+  <path
+    d="M48.5 10.6C36.2 24.4 27.3 43.7 29.9 80.5"
+    fill="none"
+    stroke="#B33A3A"
+    stroke-linecap="round"
+    stroke-width="2.4"
+    stroke-opacity="0.34"
+  />
+  <path
+    d="M21.4 35.9c7.1-4.7 14.3-8.1 21.8-10.1"
+    fill="none"
+    stroke="#FFF8F6"
+    stroke-linecap="round"
+    stroke-width="1.8"
+    stroke-opacity="0.38"
+  />
+</svg>

@@ -9,9 +9,33 @@
     />
     <title>Convite de Casamento</title>
     <link rel="preload" href="assets/wedding-hero.png" as="image" />
+    <link rel="preload" href="assets/entry-floral-bg-white.png" as="image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="has-entry-screen">
+    <div class="page-loader" id="pageLoader" role="status" aria-label="Carregando convite">
+      <span class="loader-heart" aria-hidden="true"></span>
+    </div>
+    <div class="petal-transition" id="petalTransition" aria-hidden="true"></div>
+
+    <section class="entry-screen" id="entryScreen" aria-labelledby="entryTitle">
+      <div class="entry-content">
+        <p class="entry-date" data-config="weddingDate">20 de novembro de 2026</p>
+        <h2 id="entryTitle">
+          <span class="entry-title-text">Bem-vindos ao convite de</span>
+          <span class="entry-couple" data-config="coupleNames">Sebastian e Fernanda</span>
+        </h2>
+        <p class="entry-note">A música de fundo faz parte da experiência</p>
+        <button class="entry-button" id="entryButton" type="button">Entrar</button>
+      </div>
+    </section>
+
     <header class="hero" id="inicio">
       <nav class="topbar" aria-label="Navegação principal">
         <a class="brand" href="#inicio" data-config="coupleNames">Noiva & Noivo</a>
