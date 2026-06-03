@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Convite de casamento com confirmação de presença online."
+    />
+    <title>Convite de Casamento</title>
+    <link rel="preload" href="assets/wedding-hero.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="inicio">
+      <nav class="topbar" aria-label="Navegação principal">
+        <a class="brand" href="#inicio" data-config="coupleNames">Noiva & Noivo</a>
+        <a class="nav-link" href="#confirmar">
+          <span class="nav-full">Confirmar presença</span>
+          <span class="nav-short">RSVP</span>
+        </a>
+      </nav>
+
+      <div class="hero-content">
+        <p class="eyebrow">Com carinho, convidamos você para celebrar</p>
+        <h1 data-config="coupleNames">Noiva & Noivo</h1>
+        <p class="hero-date">
+          <span data-config="weddingDate">Data a definir</span>
+          <span aria-hidden="true">•</span>
+          <span data-config="weddingTime">Horário a definir</span>
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#confirmar">Confirmar presença</a>
+          <a class="button button-secondary" href="#detalhes">Ver detalhes</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="details-section" id="detalhes" aria-labelledby="detalhes-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Celebração</p>
+            <h2 id="detalhes-title">Um dia para viver com a gente</h2>
+          </div>
+
+          <div class="details-grid">
+            <article class="detail-card">
+              <span class="detail-label">Data</span>
+              <strong data-config="weddingDate">Data a definir</strong>
+              <p data-config="weddingTime">Horário a definir</p>
+            </article>
+
+            <article class="detail-card">
+              <span class="detail-label">Cerimônia</span>
+              <strong data-config="ceremonyVenue">Local da cerimônia</strong>
+              <p data-config="ceremonyAddress">Endereço do evento</p>
+            </article>
+
+            <article class="detail-card">
+              <span class="detail-label">Recepção</span>
+              <strong data-config="receptionVenue">Local da recepção</strong>
+              <p data-config="receptionAddress">Endereço da recepção</p>
+            </article>
+
+            <article class="detail-card">
+              <span class="detail-label">Traje</span>
+              <strong data-config="dressCode">Traje social</strong>
+              <p>Escolha algo bonito, confortável e com vontade de brindar.</p>
+            </article>
+          </div>
+
+          <div class="detail-actions">
+            <a class="button button-outline" id="calendarLink" target="_blank" rel="noreferrer">
+              Adicionar ao calendário
+            </a>
+            <a class="button button-outline" id="mapLink" target="_blank" rel="noreferrer">
+              Ver mapa
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="rsvp-section" id="confirmar" aria-labelledby="confirmar-title">
+        <div class="section-inner rsvp-layout">
+          <div class="rsvp-copy">
+            <p class="eyebrow">RSVP</p>
+            <h2 id="confirmar-title">Confirme sua presença</h2>
+            <p>
+              Sua resposta ajuda a preparar cada detalhe da festa com o cuidado que
+              esse dia merece.
+            </p>
+          </div>
+
+          <form class="rsvp-form" id="rsvpForm">
+            <label class="field">
+              <span>Nome completo</span>
+              <input
+                type="text"
+                name="name"
+                autocomplete="name"
+                placeholder="Ex.: Maria Oliveira"
+                required
+              />
+            </label>
+
+            <fieldset class="field">
+              <legend>Você vai comparecer?</legend>
+              <div class="attendance-options">
+                <label class="attendance-option">
+                  <input type="radio" name="attendance" value="Sim" required />
+                  <span>Sim</span>
+                </label>
+                <label class="attendance-option">
+                  <input type="radio" name="attendance" value="Não" />
+                  <span>Não</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <label class="field">
+              <span>Acompanhantes</span>
+              <input type="number" name="guests" min="0" max="10" value="0" />
+            </label>
+
+            <label class="field">
+              <span>Mensagem</span>
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Uma mensagem para os noivos"
+              ></textarea>
+            </label>
+
+            <button class="button button-primary submit-button" type="submit">
+              Enviar confirmação
+            </button>
+
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <span data-config="coupleNames">Noiva & Noivo</span>
+        <span aria-hidden="true">•</span>
+        <span data-config="weddingDate">Data a definir</span>
+      </p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
