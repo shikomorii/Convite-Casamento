@@ -8,8 +8,9 @@
       content="Convite de casamento com confirmação de presença online."
     />
     <title>Convite de Casamento</title>
-    <link rel="preload" href="assets/wedding-hero.png" as="image" />
+    <link rel="preload" href="assets/hero-couple.png" as="image" />
     <link rel="preload" href="assets/entry-floral-bg-white.png" as="image" />
+    <link rel="preload" href="assets/countdown-tulips.png" as="image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,30 +38,70 @@
     </section>
 
     <header class="hero" id="inicio">
-      <nav class="topbar" aria-label="Navegação principal">
-        <a class="brand" href="#inicio" data-config="coupleNames">Noiva & Noivo</a>
-        <a class="nav-link" href="#confirmar">
-          <span class="nav-full">Confirmar presença</span>
-          <span class="nav-short">RSVP</span>
-        </a>
-      </nav>
+      <div class="hero-photo" aria-hidden="true"></div>
 
       <div class="hero-content">
-        <p class="eyebrow">Com carinho, convidamos você para celebrar</p>
-        <h1 data-config="coupleNames">Noiva & Noivo</h1>
-        <p class="hero-date">
-          <span data-config="weddingDate">Data a definir</span>
-          <span aria-hidden="true">•</span>
-          <span data-config="weddingTime">Horário a definir</span>
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#confirmar">Confirmar presença</a>
-          <a class="button button-secondary" href="#detalhes">Ver detalhes</a>
-        </div>
+        <p class="hero-date" data-config="weddingDate">20-11-2026</p>
+        <h1 class="hero-names" aria-label="Sebastian e Fernanda">
+          <span>Sebastian</span>
+          <span class="hero-ampersand" aria-hidden="true">&amp;</span>
+          <span>Fernanda</span>
+        </h1>
+        <blockquote class="hero-quote">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p>
+            Também, alguém pode vencer a um que está só, mas dois juntos podem
+            resistir ao agressor. E um cordão tríplice não pode ser facilmente
+            rompido.
+          </p>
+          <span class="quote-mark" aria-hidden="true">”</span>
+        </blockquote>
       </div>
     </header>
 
     <main>
+      <section class="countdown-section" aria-label="Contagem regressiva para o casamento">
+        <div class="section-inner">
+          <article class="countdown-card" id="countdown">
+            <img
+              class="countdown-tulips"
+              src="assets/countdown-tulips.png"
+              alt=""
+              decoding="async"
+              loading="lazy"
+            />
+            <div class="countdown-rings" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="countdown-content">
+              <p class="countdown-title">Falta</p>
+              <div class="countdown-values" aria-hidden="true">
+                <span class="countdown-unit">
+                  <strong data-countdown-unit="days">0</strong>
+                  <span>Dias</span>
+                </span>
+                <span class="countdown-unit">
+                  <strong data-countdown-unit="hours">00</strong>
+                  <span>Hs</span>
+                </span>
+                <span class="countdown-unit">
+                  <strong data-countdown-unit="minutes">00</strong>
+                  <span>Min</span>
+                </span>
+                <span class="countdown-unit">
+                  <strong data-countdown-unit="seconds">00</strong>
+                  <span>Seg</span>
+                </span>
+              </div>
+              <p class="sr-only" id="countdownText"></p>
+              <span class="countdown-heart" aria-hidden="true"></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="details-section" id="detalhes" aria-labelledby="detalhes-title">
         <div class="section-inner">
           <div class="section-heading">
