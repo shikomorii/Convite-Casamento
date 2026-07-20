@@ -12,5 +12,5 @@ window.WEDDING_CONFIG = {
     start: "2026-11-22T16:30:00-03:00",
     end: "2026-11-22T23:30:00-03:00",
   },
-  scriptUrl: "https://script.google.com/macros/s/AKfycbxO_CfxyufsC7YATzHSTxNtUpmTHEbs_2WUQPsVbbMclGG_AYNlILtujR7ZmH0BtmikNg/exec",
+  scriptUrl: "https://script.google.com/macros/s/AKfycbxvGToKq4J5frz7dP3-ztZUQm0rRnd8czRnUJqCkScWAxpz0CnojP0QqZbh6CQxfQ1ReQ/exec",
 };
