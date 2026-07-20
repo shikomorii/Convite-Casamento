@@ -770,6 +770,7 @@ main {
 
 .details-section,
 .countdown-section,
+.ceremony-section,
 .rsvp-section {
   position: relative;
   overflow: hidden;
@@ -780,6 +781,7 @@ main {
 
 .details-section .section-inner,
 .countdown-section .section-inner,
+.ceremony-section .section-inner,
 .rsvp-section .section-inner {
   position: relative;
 }
@@ -931,6 +933,237 @@ main {
 .countdown-heart::after {
   top: 0;
   left: 15px;
+}
+
+.ceremony-section {
+  padding-top: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.ceremony-inner {
+  display: grid;
+  justify-items: center;
+  width: min(100% - 24px, 500px);
+  min-height: 660px;
+  margin: 0 auto;
+  padding: clamp(1rem, 4vw, 1.6rem) 0 clamp(2.6rem, 7vw, 4rem);
+  text-align: center;
+}
+
+.ceremony-tulips {
+  position: absolute;
+  z-index: 0;
+  top: clamp(17rem, 50vw, 21rem);
+  left: clamp(-4.7rem, -8vw, -2.6rem);
+  width: min(48vw, 190px);
+  height: auto;
+  opacity: 0.5;
+  pointer-events: none;
+  transform: rotate(-13deg);
+  filter: drop-shadow(0 14px 24px rgba(75, 44, 43, 0.06));
+}
+
+.ceremony-rings-animation,
+.ceremony-title,
+.ceremony-block {
+  position: relative;
+  z-index: 1;
+}
+
+.ceremony-rings-animation {
+  width: 180px;
+  height: 132px;
+  margin: 0 auto 0.45rem;
+}
+
+.ceremony-rings-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.ceremony-ring {
+  fill: none;
+  stroke: rgba(164, 111, 58, 0.98);
+  stroke-width: 4.5;
+  stroke-linecap: round;
+  transform-box: fill-box;
+  transform-origin: center;
+  filter: drop-shadow(0 7px 10px rgba(75, 44, 43, 0.06));
+}
+
+.ceremony-ring-left {
+  animation: ceremony-ring-left 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.ceremony-ring-right {
+  animation: ceremony-ring-right 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.ceremony-svg-heart {
+  fill: none;
+  stroke: rgba(198, 160, 113, 0.58);
+  stroke-width: 3.1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.9;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.ceremony-heart-one {
+  stroke: rgba(234, 216, 207, 0.95);
+  animation: ceremony-heart-one 5s ease-in-out infinite;
+}
+
+.ceremony-heart-two {
+  stroke: rgba(164, 111, 58, 0.58);
+  animation: ceremony-heart-two 5s ease-in-out infinite;
+}
+
+.ceremony-title {
+  width: min(84%, 320px);
+  margin: 0 auto clamp(2rem, 7vw, 2.8rem);
+  border-top: 2px solid rgba(179, 58, 58, 0.16);
+  border-bottom: 2px solid rgba(179, 58, 58, 0.16);
+  padding: 0.42rem 0 0.56rem;
+  color: var(--soft-red);
+  font-family: var(--display-font);
+  font-size: clamp(2.6rem, 12vw, 4rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.ceremony-block {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 380px);
+  margin: 0 auto;
+}
+
+.ceremony-block + .ceremony-block {
+  margin-top: clamp(2.8rem, 9vw, 4rem);
+}
+
+.ceremony-label {
+  margin: 0 0 1rem;
+  color: var(--soft-red);
+  font-size: clamp(1.25rem, 5vw, 1.7rem);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.ceremony-text {
+  display: grid;
+  gap: 0.28rem;
+  margin: 0 0 1.2rem;
+  color: rgba(75, 44, 43, 0.6);
+  font-family: var(--display-font);
+  font-size: clamp(1.35rem, 5.8vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ceremony-text strong {
+  color: rgba(75, 44, 43, 0.68);
+  font: inherit;
+  font-weight: 700;
+}
+
+.ceremony-text span {
+  font-size: 0.88em;
+}
+
+.ceremony-button {
+  width: min(100%, 350px);
+  min-height: 56px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--white);
+  background: var(--soft-red);
+  box-shadow:
+    0 14px 26px rgba(179, 58, 58, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.ceremony-button:hover,
+.ceremony-button:focus-visible {
+  background: #9f3030;
+}
+
+.ceremony-button-outline {
+  color: var(--soft-red);
+  background: rgba(255, 251, 244, 0.82);
+  border: 1px solid rgba(179, 58, 58, 0.18);
+  box-shadow: 0 12px 24px rgba(75, 44, 43, 0.07);
+}
+
+.ceremony-button-outline:hover,
+.ceremony-button-outline:focus-visible {
+  color: var(--white);
+  background: var(--soft-red);
+}
+
+@keyframes ceremony-ring-left {
+  0%,
+  18%,
+  72%,
+  100% {
+    transform: translateX(0);
+  }
+
+  44% {
+    transform: translateX(-3px);
+  }
+}
+
+@keyframes ceremony-ring-right {
+  0%,
+  18%,
+  72%,
+  100% {
+    transform: translateX(0);
+  }
+
+  44% {
+    transform: translateX(3px);
+  }
+}
+
+@keyframes ceremony-heart-one {
+  0% {
+    opacity: 0.82;
+    transform: translate3d(0, 3px, 0) rotate(-7deg) scale(0.94);
+  }
+
+  42% {
+    opacity: 0.98;
+    transform: translate3d(-3px, -2px, 0) rotate(-9deg) scale(1.02);
+  }
+
+  100% {
+    opacity: 0.82;
+    transform: translate3d(0, 3px, 0) rotate(-7deg) scale(0.94);
+  }
+}
+
+@keyframes ceremony-heart-two {
+  0% {
+    opacity: 0.76;
+    transform: translate3d(0, 4px, 0) rotate(12deg) scale(0.86);
+  }
+
+  48% {
+    opacity: 0.94;
+    transform: translate3d(4px, -2px, 0) rotate(15deg) scale(0.95);
+  }
+
+  100% {
+    opacity: 0.76;
+    transform: translate3d(0, 4px, 0) rotate(12deg) scale(0.86);
+  }
 }
 
 .section-heading {
@@ -1189,6 +1422,21 @@ textarea:focus {
     margin: 2rem 0 2.4rem;
   }
 
+  .ceremony-inner {
+    min-height: 620px;
+  }
+
+  .ceremony-rings-animation {
+    margin-top: -0.2rem;
+  }
+
+  .ceremony-tulips {
+    top: 18rem;
+    left: -4.2rem;
+    width: min(52vw, 172px);
+    opacity: 0.42;
+  }
+
   .details-grid,
   .attendance-options {
     grid-template-columns: 1fr;
@@ -1212,6 +1460,10 @@ textarea:focus {
 
   .loader-heart,
   .petal,
+  .ceremony-ring-left,
+  .ceremony-ring-right,
+  .ceremony-heart-one,
+  .ceremony-heart-two,
   body.is-revealing-invitation .hero,
   body.is-revealing-invitation .hero-content {
     animation: none;

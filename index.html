@@ -27,7 +27,7 @@
 
     <section class="entry-screen" id="entryScreen" aria-labelledby="entryTitle">
       <div class="entry-content">
-        <p class="entry-date" data-config="weddingDate">20 de novembro de 2026</p>
+        <p class="entry-date" data-config="weddingDate">22 de novembro de 2026</p>
         <h2 id="entryTitle">
           <span class="entry-title-text">Bem-vindos ao convite de</span>
           <span class="entry-couple" data-config="coupleNames">Sebastian e Fernanda</span>
@@ -41,7 +41,7 @@
       <div class="hero-photo" aria-hidden="true"></div>
 
       <div class="hero-content">
-        <p class="hero-date" data-config="weddingDate">20-11-2026</p>
+        <p class="hero-date" data-config="weddingDate">22-11-2026</p>
         <h1 class="hero-names" aria-label="Sebastian e Fernanda">
           <span>Sebastian</span>
           <span class="hero-ampersand" aria-hidden="true">&amp;</span>
@@ -102,6 +102,60 @@
         </div>
       </section>
 
+      <section class="ceremony-section" id="cerimonia" aria-labelledby="cerimonia-title">
+        <div class="section-inner ceremony-inner">
+          <img
+            class="ceremony-tulips"
+            src="assets/countdown-tulips.png"
+            alt=""
+            decoding="async"
+            loading="lazy"
+          />
+
+          <div class="ceremony-rings-animation" aria-hidden="true">
+            <svg class="ceremony-rings-svg" viewBox="0 0 180 118" focusable="false">
+              <circle class="ceremony-ring ceremony-ring-left" cx="76" cy="70" r="31"></circle>
+              <circle class="ceremony-ring ceremony-ring-right" cx="104" cy="70" r="31"></circle>
+              <path
+                class="ceremony-svg-heart ceremony-heart-one"
+                d="M69 30 C60 15 44 21 50 37 C54 48 70 55 70 55 C70 55 86 48 90 37 C95 21 78 15 69 30"
+              ></path>
+              <path
+                class="ceremony-svg-heart ceremony-heart-two"
+                d="M107 23 C101 12 89 16 93 28 C96 36 108 42 108 42 C108 42 120 36 123 28 C127 16 113 12 107 23"
+              ></path>
+            </svg>
+          </div>
+
+          <h2 class="ceremony-title" id="cerimonia-title">Cerimônia</h2>
+
+          <div class="ceremony-block">
+            <p class="ceremony-label">Dia</p>
+            <p class="ceremony-text">Domingo, 22 de novembro - 16h30</p>
+            <a
+              class="button ceremony-button"
+              id="ceremonyCalendarLink"
+              data-calendar-link
+              target="_blank"
+              rel="noreferrer"
+            >
+              Guardar a data
+            </a>
+          </div>
+
+          <div class="ceremony-block ceremony-place">
+            <p class="ceremony-label">Lugar</p>
+            <p class="ceremony-text">
+              <strong data-config="ceremonyVenue">Local da cerimônia</strong>
+              <span data-config="ceremonyAddress">Endereço do evento</span>
+            </p>
+            <a class="button ceremony-button ceremony-button-outline" href="#confirmar">
+              Confirmar presença
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section class="details-section" id="detalhes" aria-labelledby="detalhes-title">
         <div class="section-inner">
           <div class="section-heading">
@@ -136,7 +190,13 @@
           </div>
 
           <div class="detail-actions">
-            <a class="button button-outline" id="calendarLink" target="_blank" rel="noreferrer">
+            <a
+              class="button button-outline"
+              id="calendarLink"
+              data-calendar-link
+              target="_blank"
+              rel="noreferrer"
+            >
               Adicionar ao calendário
             </a>
             <a class="button button-outline" id="mapLink" target="_blank" rel="noreferrer">

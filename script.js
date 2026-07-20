@@ -4,7 +4,7 @@
 
   const form = document.querySelector("#rsvpForm");
   const statusEl = document.querySelector("#formStatus");
-  const calendarLink = document.querySelector("#calendarLink");
+  const calendarLinks = document.querySelectorAll("[data-calendar-link]");
   const mapLink = document.querySelector("#mapLink");
   const countdown = document.querySelector("#countdown");
   const countdownText = document.querySelector("#countdownText");
@@ -29,13 +29,16 @@
     }
   });
 
-  if (calendarLink) {
+  if (calendarLinks.length > 0) {
     const calendarUrl = buildCalendarUrl(config);
-    if (calendarUrl) {
-      calendarLink.href = calendarUrl;
-    } else {
-      calendarLink.hidden = true;
-    }
+
+    calendarLinks.forEach((calendarLink) => {
+      if (calendarUrl) {
+        calendarLink.href = calendarUrl;
+      } else {
+        calendarLink.hidden = true;
+      }
+    });
   }
 
   if (mapLink) {
